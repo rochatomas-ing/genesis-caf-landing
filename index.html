@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GÉNESIS — Centro de Actividad Física | Rauch, Buenos Aires</title>
+  <meta name="description" content="GÉNESIS C.A.F: entrenamiento personalizado en Rauch con Lucas y Agustina, profesores recibidos del Profesorado de Educación Física. Rendimiento deportivo, readaptación de lesiones y calidad de vida." />
+  <meta name="theme-color" content="#0a0b0d" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="GÉNESIS — Centro de Actividad Física" />
+  <meta property="og:description" content="Entrenamiento personalizado en Rauch, Buenos Aires. Horarios, precios y contacto de Lucas y Agustina." />
+  <meta property="og:image" content="img/duo.jpg" />
+
+  <!-- Íconos -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Imagen del hero (arranca la carga antes) -->
+  <link rel="preload" as="image" href="img/hero.jpg" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Si no hay JavaScript, mostramos la versión de respaldo -->
+  <noscript>
+    <style>
+      .fallback { display: flex !important; }
+      #root { display: none !important; }
+    </style>
+  </noscript>
+
+  <script>
+    // Habilita las animaciones de scroll solo cuando hay JS
+    document.documentElement.classList.add("js");
+  </script>
+
+  <!-- Datos estructurados (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "GÉNESIS — Centro de Actividad Física",
+    "description": "Entrenamiento personalizado, rendimiento deportivo y readaptación de lesiones en Rauch, Buenos Aires.",
+    "telephone": "+54 2494 696017",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Matheu 268",
+      "addressLocality": "Rauch",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "sameAs": ["https://www.instagram.com/genesis.caf.gym"],
+    "openingHours": "Mo-Fr 08:00-21:00",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Respaldo por si el runtime de React no llega a cargar -->
+  <div class="fallback" role="alert">
+    <div class="fallback-inner">
+      <img src="img/logo-mark.png" alt="Logo de GÉNESIS" />
+      <h1>GÉNESIS</h1>
+      <p>Centro de Actividad Física — Rauch, Buenos Aires.</p>
+      <p style="margin-top:10px">
+        No se pudo cargar la versión interactiva, pero podés comunicarte directamente:
+      </p>
+      <div class="links">
+        <a href="https://wa.link/gwx8o7" target="_blank" rel="noopener">WhatsApp Profe Lucas · 2494 - 696017</a>
+        <a href="https://wa.link/c5f5il" target="_blank" rel="noopener">WhatsApp Profe Agus · 2494 - 542472</a>
+        <a href="https://www.instagram.com/genesis.caf.gym" target="_blank" rel="noopener">Instagram · @genesis.caf.gym</a>
+        <a href="https://maps.app.goo.gl/CNsfCRra7sFCTpgY7" target="_blank" rel="noopener">Av. Matheu 268 — Rauch, Buenos Aires</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- React + htm (incluidos localmente: funciona sin internet) -->
+  <script src="vendor/react.production.min.js" defer></script>
+  <script src="vendor/react-dom.production.min.js" defer></script>
+  <script src="vendor/htm.umd.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+  <script>
+    // Si React no montó en 3,5 s mostramos el respaldo en lugar de una página vacía
+    setTimeout(function () {
+      if (!window.__genesisMounted) {
+        document.documentElement.classList.add("no-react");
+      }
+    }, 3500);
+  </script>
+</body>
+</html>
