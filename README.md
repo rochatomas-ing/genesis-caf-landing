@@ -6,6 +6,10 @@ el gimnasio de **Lucas y Agustina** en **Av. Matheu 268, Rauch, Buenos Aires**.
 Toda la información (horarios, precios, normas, contactos) fue tomada del sitio original del gimnasio
 (`politica-nulma.my.canva.site/genesis-caf-gym`).
 
+> 📚 **¿Primera vez con HTML / CSS / JavaScript?** Mirá [LEARNING.md](LEARNING.md): tiene la ruta de
+> aprendizaje en 4 sesiones y recetas paso a paso para cambiar precios, horarios, colores y fotos sin
+> romper nada. Y podés volver atrás cualquier cambio con `git restore <archivo>` (guía, sección 1).
+
 ---
 
 ## ▶️ Cómo verla

@@ -705,6 +705,7 @@
   }
 
   function Pricing() {
+    var part = PLANS[0]; // clase particular (la primera de la lista)
     return html`<section className="section" id="precios" aria-labelledby="t-precios">
       <div className="glow" style=${{ width: "480px", height: "480px", top: "6%", right: "-10%", background: "rgba(10,162,139,.10)" }} aria-hidden="true"></div>
       <div className="container">
@@ -720,12 +721,12 @@
           <div className="glass feature-card">
             <span className="fc-ico"><${IconDumbbell} s=${26} /></span>
             <div>
-              <div className="fc-name">Clase particular</div>
+              <div className="fc-name">${part.name}</div>
               <div className="fc-desc">Ideal para arrancar, probar o entrenamientos puntuales.</div>
             </div>
             <div className="fc-price">
-              <span className="p">$6.000</span>
-              <span className="u">por clase</span>
+              <span className="p">${part.price}</span>
+              <span className="u">${part.per}</span>
             </div>
           </div>
         <//>
