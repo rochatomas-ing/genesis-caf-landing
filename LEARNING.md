@@ -242,7 +242,37 @@ Ojo con dos detalles de JavaScript que confunden al principio:
 
 ---
 
-## 9. Reglas de oro para editar sin romper
+## 9. GitHub: guardar y compartir tus cambios (ciclo completo)
+
+**Comandos:**
+
+```bash
+git status                  # 1. ¿qué cambié?
+git add .                   # 2. preparar todos los cambios
+git commit -m "Cambié los precios"   # 3. guardar el estado con un mensaje
+git push                    # 4. subirlo a GitHub
+```
+
+**Ejemplo real:** cambiás un precio → `git status` → `git add .` → `git commit -m "Actualicé precios"`
+→ `git push`. Con eso tu cambio queda guardado en el historial **y** subido a GitHub: si mañana se rompe
+la página en otro dispositivo, recuperás la versión anterior desde la web.
+
+- `git log --oneline` te muestra el historial (una línea por versión guardada).
+- `git diff` te muestra, línea por línea, qué modificaste antes de guardar.
+- **Deshacer sin guardar todavía:** `git restore js/app.js` (borra los cambios de ese archivo).
+- Si ya habías hecho commit y te arrepentiste: no se borra el historial, se corrige y se sube otra
+  versión (`git add . && git commit -m "Corrijo..." && git push`). Eso es normal y está bien.
+
+**Sobre este repositorio:**
+
+- Está en <https://github.com/rochatomas-ing/genesis-caf-landing> (público: cualquiera puede ver el código y las fotos).
+- Si algún día querés que sea privado: en GitHub, **Settings → Danger Zone → Change visibility**.
+- Opcional: se puede publicar la página como sitio web con **Settings → Pages** (source: `main`, carpeta `/`).
+  Eso genera una dirección pública tipo `https://rochatomas-ing.github.io/genesis-caf-landing/`.
+
+---
+
+## 10. Reglas de oro para editar sin romper
 
 1. **Un cambio a la vez**: guardá, probá, y recién ahí hacés el siguiente.
 2. **Siempre probá en el navegador** con `Ctrl+Shift+R`.
